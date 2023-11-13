@@ -1,0 +1,37 @@
+Compile the application
+```
+cd src
+
+javac *.java
+```
+
+Need at least three terminals to run the application.
+
+Terminal 1:
+Start the registry server
+```
+rmiregistry
+```
+
+Terminal 2:
+Start the RMI server
+```
+java KeyValueStoreServer
+```
+
+Terminal 3:
+Start the client to init 10 test key value pairs
+```
+java KeyValueStoreClient
+```
+
+Then use the KeyValueStoreCmd to do more operation.
+For examples:
+```
+java KeyValueStoreCmd get key1
+java KeyValueStoreCmd put someKey someValue
+java KeyValueStoreCmd delete key1
+```
+
+
+
